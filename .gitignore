@@ -2,3 +2,4 @@ build
 src/lib/*
 .chromia
 .idea/
+.junie/

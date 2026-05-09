@@ -1,66 +1,57 @@
 # Hello World Chromia Template
 
-This repository is a Chromia Rell template project with a pre-configured Docker and devcontainer environment.
-
-## Pre-configured environment with Docker
-
-This setup provides a fully pre-configured development environment using Docker and dev containers, so you do not need
-to manually install and configure the individual Chromia components.
-
-### Prerequisites
-
-Before starting, make sure you have the following installed on your machine:
-
-- [Docker](https://docs.docker.com/get-started/get-docker): must be installed and running
-- VS Code or a VS Code-based IDE such as Cursor or Windsurf
-- Dev Containers extension:
-  [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+This repository is a Chromia Rell template project with a pre-configured environment for **GitHub Codespaces** and **Local Development** using Docker. It includes all necessary tools to start building on Chromia immediately.
 
 ## Quick Start
 
-### Open the project
+Use this repository as a template.
 
-Clone this repository, then open the project folder in VS Code.
+### Create your repository
+Click **Use this template** and choose **Create a new repository** or **Open in a codespace**.
 
-When VS Code detects the devcontainer configuration, it will suggest reopening the folder in a container. Choose
-**Reopen in Container** to:
+### Choose your development environment
 
-- Build and start the development container
-- Install the required dependencies
-- Configure the development environment
-- Provide access to the Chromia development tools
+#### GitHub Codespaces
+Choose **Open in a codespace** to start a Codespace directly from this template.
 
-Once the devcontainer is running, you can use the integrated terminal in VS Code to run Chromia CLI commands such as
-`chr test` and `chr build`.
+#### Local Development
+Prerequisites:
+- [Docker](https://docs.docker.com/get-started/get-docker) must be installed and running.
+- [VS Code](https://code.visualstudio.com/) with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed.
 
-## Create a GitHub Codespace
+Setup:
+1. Clone your new repository locally.
+2. Open the project folder in VS Code.
+3. When prompted with **Reopen in Container**, click it. This builds and starts the development environment.
 
-You can also create a Codespace directly from the repo.
+## Usage
 
-### Recommended flow
+Once your environment is ready, use the integrated terminal to run Chromia CLI (`chr`) commands.
 
-1. Click **Code**.
-2. Select the **Codespaces** tab.
-3. Click **Create codespace on main**.
+### Run tests
+```bash
+chr test
+```
 
-GitHub will build the dev container automatically and open the project in a cloud-based development environment with the
-same tools and configuration included in this template.
+### Build the project
+```bash
+chr build
+```
 
-## What's included
+## What's Included
 
-The dev container environment comes pre-configured with:
+The environment comes pre-installed with:
 
-- Rell VS Code extension
-- PostgreSQL
-- Chromia CLI
-- PMC
-- Proper environment configuration
+- Chromia CLI (`chr`) for project management, testing, and building.
+- PMC (`pmc`) - the Chromia Project Management Console.
+- Pre-configured PostgreSQL database backend.
+- Rell extension for syntax highlighting and language support in VS Code.
+- A standard project structure including:
+  - `chromia.yml` (Project configuration)
+  - `src/main.rell` (Hello World Rell module)
+  - `src/test/` (Example tests)
 
-## Template contents
-
-This template includes:
-
-- `chromia.yml` for Chromia project configuration
-- `src/main.rell` with a simple Hello World example
-- `src/test/` with example Rell tests
-- `.devcontainer/` with a ready-to-use development container setup
+## Resources
+- [Chromia Documentation](https://docs.chromia.com/)
+- [Rell Language Reference](https://docs.chromia.com/rell/)
+- [Chromia CLI Reference](https://docs.chromia.com/dev-tools/cli/)
